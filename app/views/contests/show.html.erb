@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @contest.title %></h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @contest.description %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @contest.published %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @contest.approved %>
+</p>
+
+<p>
+  <strong>Reward:</strong>
+  <%= @contest.reward %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @contest.category %>
+</p>
+
+<p>
+  <strong>Subcategory:</strong>
+  <%= @contest.subcategory %>
+</p>
+
+<%= link_to 'Submissions', contest_submissions_path(@contest) %> |
+<%= link_to 'Edit', edit_contest_path(@contest) %> |
+<%= link_to 'Back', contests_path %>
+
+
+<% @contest.submissions.each do |submission| %>
+<p><%= link_to submission.title, contest_submission_path(@contest, submission) %></p>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @submission.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @submission.description %>
+</p>
+
+<p>
+  <strong>Published:</strong>
+  <%= @submission.published %>
+</p>
+
+<p>
+  <strong>Contest:</strong>
+  <%= @submission.contest %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @submission.rating %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @submission.status %>
+</p>
+
+<%= link_to 'Edit', edit_contest_submission_path(@contest, @submission) %> |
+<%= link_to 'Back', contest_submissions_path(@contest) %>
